@@ -3,11 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
     </head>
 
     <body>
@@ -16,22 +11,27 @@
             <div class="">
                 Evaluate a news article with Meaning Cloud - Topics Extraction API
             </div>
-            <div class="">
-                navigation
-            </div>
         </header>
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form>
+                    <label for="url">Enter a URL here:</label>
+                    <input id="url" type="text" name="url" placeholder="http://wwww.example.com">
+                    <button id="submit" type="button" name="" value="submit" onclick="return Client.handleSubmit(event)">Analyse</button>
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <h2>Evaluation Results:</h2>
+                <div id="results">
+                    <div id="model"></div>
+                    <div id="score_tag"></div>
+                    <div id="agreement"></div>
+                    <div id="subjectivity"></div>
+                    <div id="confidence"></div>
+                    <div id="irony"></div>
+                </div>
             </section>
         </main>
 
@@ -40,4 +40,13 @@
         </footer>
 
     </body>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
 </html>
