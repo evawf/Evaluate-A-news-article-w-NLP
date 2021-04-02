@@ -7,6 +7,7 @@ const path = require('path');
 const express = require('express');
 const app = express()
 const cors = require('cors');
+const bodyParser = require('body-parser');
 // const { request, response } = require('express');
 const mockAPIResponse = require('./mockAPI.js');
 const FormData = require('form-data');
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use(express.static('dist'));
+app.use(bodyParser.json());
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
@@ -33,14 +35,18 @@ app.get('/', function (req, res) {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+let projectData = {};
+app.get('/analyse', function(req, res) {
+    let projectData = data;
+    res.send(projectData);
+})
 
 let data = [];
 app.post('/analyse', getAnalysis);
 async function getAnalysis(req, res){
-    let formInput = req.body.formInpput;
-    // let formInput = "https://www.channelnewsasia.com/news/asia/japan-cherry-blossom-sakura-season-peak-bloom-climate-change-14528756";
+    const formInput = req.body.formInput;
     let results = await getAnalysisData(formInput);
-    let showData = {
+    let addData = {
         model: results.model,
         score_tag: results.score_tag,
         agreement: results.agreement,
@@ -48,7 +54,7 @@ async function getAnalysis(req, res){
         confidence: results.confidence,
         irony: results.irony
     }
-    data.push(showData);
+    data.push(addData);
     res.send(data);
 }
 
@@ -57,7 +63,6 @@ const getAnalysisData = async (formInput) => {
     const baseURL = "http://api.meaningcloud.com";
     const subURL = "/sentiment-2.1?key=" + apiKey + "&lang=auto&url=" + formInput;
     const url = baseURL + subURL;
-    console.log(url);
     const res = await fetch(url) 
     try{
         const Data = await res.json();
