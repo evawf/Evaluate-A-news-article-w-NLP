@@ -1,6 +1,5 @@
 form {
     background-color: #536162;
-    border: 1px solid #545454;
     border-radius: 169px;
     padding: 40px;
     margin: 0px 50px;
@@ -12,6 +11,7 @@ form {
     }
 
     input, button {
+        border: 0.1px solid white;
         padding: 5px 20px;
         width: 100%;
         line-height: 16px;
