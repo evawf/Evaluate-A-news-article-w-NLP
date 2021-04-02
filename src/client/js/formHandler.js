@@ -51,5 +51,4 @@ const displayResults = async () => {
     }
 }
 
-
 export { handleSubmit }
