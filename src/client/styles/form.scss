@@ -1,12 +1,28 @@
 form {
+    background-color: #536162;
     border: 1px solid #545454;
-    border-radius: 3px;
+    border-radius: 169px;
     padding: 40px;
+    margin: 0px 50px;
+    text-align: center;
+    box-shadow: 3px 6px 8px 3px #888888;
+
+    label {
+        color: #fff;
+    }
+
+    input, button {
+        padding: 5px 20px;
+        width: 100%;
+        line-height: 16px;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 16px;
+    }
+
+    button:hover {
+        background-color: #c06014;
+        color: #fff;
+    }
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
-}

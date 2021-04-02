@@ -1,6 +1,16 @@
+$font-color: #c06014;
+
 header {
-    display: flex;
-    justify-content: space-between;
     text-align: center;
-    padding: 10px 40px;
+    margin: 50px 50px;
+    padding: 10px 10px;
+    font-family: 'Abril Fatface';
+    color: $font-color;
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        margin-top: 8px;
+        font-size: 20px;
+    }
 }

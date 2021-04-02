@@ -24,7 +24,7 @@ function handleSubmit(event) {
         postData('http://localhost:8081/analyse', { formInput });
         displayResults();
     } else {
-        alert('Please enter a correct url.');
+        alert('Please enter valid URL!');
     }
 }
 
