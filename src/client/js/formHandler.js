@@ -20,11 +20,13 @@ const postData = async (url = '', data = {}) => {
 function handleSubmit(event) {
     event.preventDefault()
     const formInput = document.getElementById('url').value;
+    const errorMsg = document.getElementById('errorMsg');
     if(Client.checkForUrl(formInput)) {
         postData('http://localhost:8081/analyse', { formInput });
         displayResults();
     } else {
-        alert('Please enter valid URL!');
+        errorMsg.innerHTML = "Please enter a valid URL!";
+        errorMsg.style.color = "red";
     }
 }
 
