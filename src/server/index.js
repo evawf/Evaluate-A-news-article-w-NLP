@@ -28,20 +28,14 @@ app.listen(8081, function () {
 console.log(__dirname)
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
     res.sendFile('dist/index.html')
-})
+});
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
-})
-let projectData = {};
-app.get('/analyse', function(req, res) {
-    let projectData = data;
-    res.send(projectData);
-})
+});
 
-let data = [];
+// let data = [];
 app.post('/analyse', getAnalysis);
 async function getAnalysis(req, res){
     const formInput = req.body.formInput;
@@ -54,8 +48,7 @@ async function getAnalysis(req, res){
         confidence: results.confidence,
         irony: results.irony
     }
-    data.push(addData);
-    res.send(data);
+    res.send(addData);
 }
 
 //Fetch API data

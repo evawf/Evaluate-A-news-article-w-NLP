@@ -1,4 +1,4 @@
-# Project Instructions
+# Project Info
 
 This is my fourth project from Udacity FrontEndWebDeveloper Course, through this project to learn how to use Webpack to bundle html, css and js files, and add necessary loaders & plugins.
 
@@ -25,3 +25,6 @@ I used the starter code for this project, then followed the project instructions
 - Fix the service worker
 - Add jest test functions
 - Update the sass stylesheets
+
+## API UI
+Check this link to view api UI:

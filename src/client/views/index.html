@@ -18,7 +18,7 @@
 
         <main>
             <section>
-                <form>
+                <form id="frm">
                     <label for="url">Enter a URL here:</label>
                     <input id="url" type="text" name="url" placeholder="http://wwww.example.com">
                     <div id="errorMsg"></div>
@@ -29,6 +29,7 @@
 
             <section class="results">
                 <h2>Evaluation Results</h2>
+                <div id="loader"></div>
                 <div id="results">
                     <div id="model"></div>
                     <div id="score_tag"></div>
@@ -43,4 +44,13 @@
             <p><a href="https://github.com/evawf/Evaluate-A-news-article-w-NLP">&copy GITHUB-EW</a></p> 
         </footer>
     </body>
+    <script>
+        const preloader = document.getElementById('loader');
+        function showPreLoader(){
+            preloader.style.display = 'block';
+        }
+        function hidePreLoader(){
+            preloader.style.display = 'none';
+        }
+    </script>
 </html>
