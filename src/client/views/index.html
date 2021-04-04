@@ -46,11 +46,15 @@
     </body>
     <script>
         // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
+        if (process.env.NODE_ENV === "production") {
+            if ('serviceWorker' in navigator) {
         // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                avigator.serviceWorker.register('/service-worker.js')
-            })
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        } else {
+            console.log("This is dev mode!");
         }
     </script>
 </html>
