@@ -14,19 +14,6 @@ section {
     text-align: center;
 }
 
-#results {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #424642;
-
-    div{
-        padding: 3px;
-        font-weight: bold;
-    }
-}
-
 .results {
     margin-top: 50px;
 
@@ -44,5 +31,19 @@ section {
         padding-left: 100%;
         display: none;
         transition: opacity 2s ease-in-out;
+    }
+}
+
+#results {
+    display: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #424642;
+
+    div{
+        padding: 3px;
+        font-weight: bold;
     }
 }

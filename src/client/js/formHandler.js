@@ -22,11 +22,14 @@ function init() {
 
 //PreLoader Handler
 const preloader = document.getElementById('loader');
+const resultsDiv = document.getElementById('results');
 function showPreLoader(){
     preloader.style.display = 'block';
+    resultsDiv.style.display = 'none';
 }
 function hidePreLoader(){
     preloader.style.display = 'none';
+    resultsDiv.style.display = 'block';
 }
 
 //Post Form Input
