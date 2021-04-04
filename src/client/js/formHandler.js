@@ -39,7 +39,7 @@ async function handleSubmit(event) {
     const errorMsg = document.getElementById('errorMsg');
     if(Client.checkForUrl(formInput)) {
         showPreLoader();
-        const data = await postData('http://localhost:8081/analyse', { formInput });
+        const data = await postData('/analyse', { formInput });
         displayResults(data);
     } else {
         errorMsg.innerHTML = "Please enter a valid URL!";
