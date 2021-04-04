@@ -26,5 +26,6 @@ I used the starter code for this project, then followed the project instructions
 - Add jest test functions
 - Update the sass stylesheets
 
-## API UI
-Check this link to view api UI:
+## Deploy in Heroku
+Check this link to view:
+https://news-article-analysis.herokuapp.com/
