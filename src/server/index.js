@@ -21,8 +21,8 @@ app.use(express.static('dist'));
 app.use(bodyParser.json());
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(process.env.PORT || 8081, function () {
+    console.log(`Example app listening on port ${process.env.PORT || 8081}!`)
 });
 
 console.log(__dirname)
