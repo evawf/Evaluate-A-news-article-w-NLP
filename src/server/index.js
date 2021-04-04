@@ -29,7 +29,7 @@ app.listen(port, function () {
 console.log(__dirname)
 
 app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
+    res.sendFile('dist/index.html', { root: __dirname })
 });
 
 app.get('/test', function (req, res) {
