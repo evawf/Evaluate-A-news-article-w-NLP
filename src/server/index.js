@@ -36,7 +36,6 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 });
 
-// let data = [];
 app.post('/analyse', getAnalysis);
 async function getAnalysis(req, res){
     const formInput = req.body.formInput;
