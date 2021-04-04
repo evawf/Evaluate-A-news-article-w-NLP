@@ -20,6 +20,15 @@ function init() {
     location.reload(1)
 }
 
+//PreLoader Handler
+const preloader = document.getElementById('loader');
+function showPreLoader(){
+    preloader.style.display = 'block';
+}
+function hidePreLoader(){
+    preloader.style.display = 'none';
+}
+
 //Post Form Input
 async function handleSubmit(event) {
     event.preventDefault()
