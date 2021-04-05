@@ -8,5 +8,4 @@ let checkForUrl = formInput => {
     return !!pattern.test(formInput);
 }
 
-
 export { checkForUrl }
