@@ -1,4 +1,4 @@
-# Project Info
+# News Article Evaluation Project
 
 This is my fourth project from Udacity FrontEndWebDeveloper Course, through this project to learn how to use Webpack to bundle html, css and js files, and add necessary loaders & plugins.
 
