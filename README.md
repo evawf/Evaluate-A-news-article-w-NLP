@@ -20,12 +20,15 @@ check [here](https://www.meaningcloud.com/developer/sentiment-analysis).
 I used the starter code for this project, then followed the project instructions: 
 - Install and configure Webpack
 - Set up the API 
-- Make sure server and client code works
+- Write server and client code
 - Add environment variables
 - Fix the service worker
 - Add jest test functions
 - Update the sass stylesheets
+- Fix errors
+- Clean up code
+
 
 ## Deploy in Heroku
-Check this link to view:
+Check this link to view app:
 https://news-article-analysis.herokuapp.com/
